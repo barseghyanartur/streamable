@@ -96,7 +96,7 @@ inverses: Stream[float] = (
 ---
 
 # 📒 ***Operations***
-## `.map`
+<details open><summary><span style="font-size: 25px;"><b><code>.map</code></b></span></summary><br/>
 
 > Applies a transformation on elements:
 
@@ -179,7 +179,11 @@ assert list(zeros) == [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
 > Also convenient with `.foreach`, `.filter`, ...
 
-## `.foreach`
+</details>
+
+</details>
+
+<details><summary><span style="font-size: 25px;"><b><code>.foreach</code></b></span></summary><br/>
 
 > Applies a side effect on elements:
 
@@ -201,7 +205,9 @@ assert list(self_printing_integers) == list(integers)  # triggers the printing
 
 > Like `.map` it has a sibling `.aforeach` operation for async.
 
-## `.filter`
+</details>
+
+<details><summary><span style="font-size: 25px;"><b><code>.filter</code></b></span></summary><br/>
 
 > Keeps only the elements that satisfy a condition:
 
@@ -211,7 +217,9 @@ pair_integers: Stream[int] = integers.filter(lambda n: n % 2 == 0)
 assert list(pair_integers) == [0, 2, 4, 6, 8]
 ```
 
-## `.throttle`
+</details>
+
+<details><summary><span style="font-size: 25px;"><b><code>.throttle</code></b></span></summary><br/>
 
 > Limits the number of yields `per_second`/`per_minute`/`per_hour`:
 
@@ -231,7 +239,9 @@ slow_integers = integers.throttle(interval=timedelta(milliseconds=100))
 assert list(slow_integers) == list(integers)  # takes 10 * 0.1 = 1 second
 ```
 
-## `.group`
+</details>
+
+<details><summary><span style="font-size: 25px;"><b><code>.group</code></b></span></summary><br/>
 
 > Groups elements into `List`s:
 
@@ -264,7 +274,9 @@ integers_2_by_2_by_parity: Stream[List[int]] = integers.group(by=lambda n: n % 2
 assert list(integers_2_by_2_by_parity) == [[0, 2], [1, 3], [4, 6], [5, 7], [8], [9]]
 ```
 
-## `.flatten`
+</details>
+
+<details><summary><span style="font-size: 25px;"><b><code>.flatten</code></b></span></summary><br/>
 
 > Ungroups elements assuming that they are `Iterable`s.
 
@@ -284,7 +296,9 @@ assert list(mix_of_0s_and_1s) == [0, 1, 0, 1, 0, 1, 0, 1]
 ```
 
 
-## `.catch`
+</details>
+
+<details><summary><span style="font-size: 25px;"><b><code>.catch</code></b></span></summary><br/>
 
 > Catches a given type of exceptions, and optionally yields a `replacement` value:
 
@@ -315,7 +329,9 @@ assert list(status_codes_ignoring_resolution_errors) == [200, 404]
 
 > It has an optional `finally_raise: bool` parameter to raise the first catched exception when iteration ends.
 
-## `.truncate`
+</details>
+
+<details><summary><span style="font-size: 25px;"><b><code>.truncate</code></b></span></summary><br/>
 
 > Ends iteration once a given number of elements have been yielded:
 
@@ -333,7 +349,9 @@ five_first_integers: Stream[int] = integers.truncate(when=lambda n: n == 5)
 assert list(five_first_integers) == [0, 1, 2, 3, 4]
 ```
 
-## `.observe`
+</details>
+
+<details><summary><span style="font-size: 25px;"><b><code>.observe</code></b></span></summary><br/>
 
 > Logs the progress of iterations over this stream, if you iterate on:
 ```python
@@ -353,7 +371,9 @@ INFO: [duration=0:00:05.039571 errors=0] 10 integers yielded
 > [!WARNING]
 > It is mute between *v1.1.0* and *v1.3.1*, please `pip install --upgrade streamable`
 
-## `zip`
+</details>
+
+<details><summary><span style="font-size: 25px;"><b><code>zip</code></b></span></summary><br/>
 
 > Use the standard `zip` function:
 
@@ -367,7 +387,7 @@ cubes: Stream[int] = (
 
 assert list(cubes) == [0, 1, 8, 27, 64, 125, 216, 343, 512, 729]
 ```
-
+</details>
 ---
 
 # 📦 ***Notes Box***
