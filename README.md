@@ -96,7 +96,7 @@ inverses: Stream[float] = (
 ---
 
 # 📒 ***Operations***
-<details open><summary><span style="font-size: 25px;"><b><code>.map</code></b></span></summary><br/>
+<details open><summary><span style="font-size: 50px;"><b><code>.map</code></b></span></summary><br/>
 
 > Applies a transformation on elements:
 
@@ -183,7 +183,7 @@ assert list(zeros) == [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
 </details>
 
-<details><summary><span style="font-size: 25px;"><b><code>.foreach</code></b></span></summary><br/>
+<details><summary><span style="font-size: 50px;"><b><code>.foreach</code></b></span></summary><br/>
 
 > Applies a side effect on elements:
 
@@ -207,7 +207,7 @@ assert list(self_printing_integers) == list(integers)  # triggers the printing
 
 </details>
 
-<details><summary><span style="font-size: 25px;"><b><code>.filter</code></b></span></summary><br/>
+<details><summary><span style="font-size: 50px;"><b><code>.filter</code></b></span></summary><br/>
 
 > Keeps only the elements that satisfy a condition:
 
@@ -219,7 +219,7 @@ assert list(pair_integers) == [0, 2, 4, 6, 8]
 
 </details>
 
-<details><summary><span style="font-size: 25px;"><b><code>.throttle</code></b></span></summary><br/>
+<details><summary><span style="font-size: 50px;"><b><code>.throttle</code></b></span></summary><br/>
 
 > Limits the number of yields `per_second`/`per_minute`/`per_hour`:
 
@@ -241,7 +241,7 @@ assert list(slow_integers) == list(integers)  # takes 10 * 0.1 = 1 second
 
 </details>
 
-<details><summary><span style="font-size: 25px;"><b><code>.group</code></b></span></summary><br/>
+<details><summary><span style="font-size: 50px;"><b><code>.group</code></b></span></summary><br/>
 
 > Groups elements into `List`s:
 
@@ -276,7 +276,7 @@ assert list(integers_2_by_2_by_parity) == [[0, 2], [1, 3], [4, 6], [5, 7], [8], 
 
 </details>
 
-<details><summary><span style="font-size: 25px;"><b><code>.flatten</code></b></span></summary><br/>
+<details><summary><span style="font-size: 50px;"><b><code>.flatten</code></b></span></summary><br/>
 
 > Ungroups elements assuming that they are `Iterable`s.
 
@@ -298,7 +298,7 @@ assert list(mix_of_0s_and_1s) == [0, 1, 0, 1, 0, 1, 0, 1]
 
 </details>
 
-<details><summary><span style="font-size: 25px;"><b><code>.catch</code></b></span></summary><br/>
+<details><summary><span style="font-size: 50px;"><b><code>.catch</code></b></span></summary><br/>
 
 > Catches a given type of exceptions, and optionally yields a `replacement` value:
 
@@ -331,7 +331,7 @@ assert list(status_codes_ignoring_resolution_errors) == [200, 404]
 
 </details>
 
-<details><summary><span style="font-size: 25px;"><b><code>.truncate</code></b></span></summary><br/>
+<details><summary><span style="font-size: 50px;"><b><code>.truncate</code></b></span></summary><br/>
 
 > Ends iteration once a given number of elements have been yielded:
 
@@ -351,7 +351,7 @@ assert list(five_first_integers) == [0, 1, 2, 3, 4]
 
 </details>
 
-<details><summary><span style="font-size: 25px;"><b><code>.observe</code></b></span></summary><br/>
+<details><summary><span style="font-size: 50px;"><b><code>.observe</code></b></span></summary><br/>
 
 > Logs the progress of iterations over this stream, if you iterate on:
 ```python
@@ -373,7 +373,7 @@ INFO: [duration=0:00:05.039571 errors=0] 10 integers yielded
 
 </details>
 
-<details><summary><span style="font-size: 25px;"><b><code>zip</code></b></span></summary><br/>
+<details><summary><span style="font-size: 50px;"><b><code>zip</code></b></span></summary><br/>
 
 > Use the standard `zip` function:
 
